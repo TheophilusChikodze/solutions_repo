@@ -1,4 +1,1 @@
-# Problem 1
-hello 
-
-![alt text](image.png)
+# Investigating the Range as a Function of the Angle of Projection
