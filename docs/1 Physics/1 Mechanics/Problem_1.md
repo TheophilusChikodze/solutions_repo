@@ -72,7 +72,42 @@ These results show that **45° gives the maximum range**, while **35° has a sli
 ### Python script to compute and plot the range 
 
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
 
+# Constants
+g = 10  # Acceleration due to gravity (m/s²)
+v0 = 20  # Initial velocity (m/s)
+
+# Angle (45 degrees)
+angle = 45
+angle_rad = np.radians(angle)  # Convert to radians
+
+# Time of flight calculation
+t_flight = 2 * v0 * np.sin(angle_rad) / g
+
+# Time intervals for the projectile motion
+t = np.linspace(0, t_flight, num=100)
+
+# Calculate x and y positions of the projectile
+x = v0 * np.cos(angle_rad) * t
+y = v0 * np.sin(angle_rad) * t - 0.5 * g * t**2
+
+# Plot the trajectory
+plt.figure(figsize=(8, 5))
+plt.plot(x, y, label=f'Projectile at {angle}°', color="b")
+plt.axhline(0, color="black",linewidth=1)  # Ground level
+plt.axvline(x=max(x), linestyle="--", color="r", label=f"Range = {max(x):.2f} m")
+
+# Labels and title
+plt.xlabel("Distance (m)")
+plt.ylabel("Height (m)")
+plt.title(f"Projectile Motion at {angle}° with Initial Velocity {v0} m/s")
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+![alt text](image-2.png)
 
 
 
