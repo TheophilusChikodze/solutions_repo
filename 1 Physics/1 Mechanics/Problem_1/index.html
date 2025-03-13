@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Investigating the Range as a Function of the Angle of Projection - Physics and Mathematics</title>
+<title>Problem 1 - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Investigating the Range as a Function of the Angle of Projection";
+        var mkdocs_page_name = "Problem 1";
         var mkdocs_page_input_path = "1 Physics/1 Mechanics/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -46,7 +46,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal current">1 Mechanics</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Investigating the Range as a Function of the Angle of Projection</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
 </ul>
 </li>
@@ -163,7 +163,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">1 Mechanics</li>
-<li class="breadcrumb-item active">Investigating the Range as a Function of the Angle of Projection</li>
+<li class="breadcrumb-item active">Problem 1</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -171,7 +171,55 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
+<h1 id="problem-1">Problem 1</h1>
 <h1 id="investigating-the-range-as-a-function-of-the-angle-of-projection">Investigating the Range as a Function of the Angle of Projection</h1>
+<h2 id="theoretical-foundation">Theoretical Foundation</h2>
+<p>Projectile motion follows Newton’s laws, with <strong>horizontal motion</strong> at constant velocity and <strong>vertical motion</strong> under gravity. The <strong>range</strong> depends on <strong>initial velocity</strong> and <strong>angle of projection</strong>, derived from kinematic equations.</p>
+<p>The key variables are: </p>
+<ul>
+<li>Initial velocity (<span class="arithmatex">\(v0\)</span>)</li>
+<li>Angle of projection (<span class="arithmatex">\(θ\)</span>)</li>
+<li>Gravitational acceleration (<span class="arithmatex">\(g\)</span>)</li>
+</ul>
+<p>The <strong>range formula</strong> is: </p>
+<p>$$
+R = \frac{v_0^2 \sin(2\theta)}{g}
+$$
+\
+It is <strong>maximized at 45°</strong> in ideal conditions. Real-world factors like air resistance, gravity variations, and terrain require computational simulations for accuracy. Higher velocity increases range, and lower gravity extends it, making this study crucial for sports, engineering, and aerospace applications.</p>
+<h2 id="practical-applications">Practical Applications</h2>
+<p>Projectile motion is crucial in <strong>sports</strong>, where athletes optimize angles for maximum range (e.g., soccer, basketball, javelin).<br/>
+In <strong>military and defense</strong>, accurate trajectory calculations improve targeting for artillery and missiles.<br/>
+In <strong>aerospace and engineering</strong>, projectile principles guide rocket launches, spacecraft trajectories, and planetary landings, requiring computational simulations for precision.  </p>
+<h2 id="calculating-range-at-different-angles">Calculating Range at Different Angles</h2>
+<p>Using the <strong>range formula</strong>:  </p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<p>Projectile range for angles <strong>35°</strong> and <strong>45°</strong>, with an initial velocity of <strong>20 m/s</strong> and gravity <strong><span class="arithmatex">\( g = 10 \)</span> m/s²</strong>.  </p>
+<h4 id="example-1-angle-35">Example 1: <strong>Angle = 35°</strong></h4>
+<div class="arithmatex">\[
+R = \frac{20^2 \sin(70°)}{10}
+\]</div>
+<div class="arithmatex">\[
+R = \frac{400 \times 0.9397}{10}
+\]</div>
+<div class="arithmatex">\[
+R = \frac{375.88}{10} = 37.6 \text{ m}
+\]</div>
+<h4 id="example-2-angle-45-optimal-angle">Example 2: <strong>Angle = 45°</strong> (Optimal Angle)</h4>
+<div class="arithmatex">\[
+R = \frac{20^2 \sin(90°)}{10}
+\]</div>
+<div class="arithmatex">\[
+R = \frac{400 \times 1}{10}
+\]</div>
+<div class="arithmatex">\[
+R = \frac{400}{10} = 40 \text{ m}
+\]</div>
+<p>These results show that <strong>45° gives the maximum range</strong>, while <strong>35° has a slightly shorter range</strong>.</p>
+<h3 id="python-script-to-compute-and-plot-the-range">Python script to compute and plot the range</h3>
+<p>```python</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
