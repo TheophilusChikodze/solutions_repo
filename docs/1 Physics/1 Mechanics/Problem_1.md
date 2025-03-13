@@ -23,7 +23,7 @@ $$R = \frac{v_0^2 \sin(2\theta)}{g}$$
 ## Range And Analysis
 * Range is **maximized at 45°** in ideal conditions.
 
-* Real-world factors like air resistance, gravity variations, and terrain require computational simulations for accuracy. 
+* Real-world factors like **air resistance**, **gravity variations**, and **terrain** require computational simulations for accuracy. 
 
 * Higher velocity increases range, and lower gravity extends it, making this study crucial for sports, engineering, and aerospace applications.
 
