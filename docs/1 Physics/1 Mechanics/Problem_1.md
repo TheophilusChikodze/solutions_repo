@@ -1,6 +1,11 @@
 # Problem 1
 # Investigating the Range as a Function of the Angle of Projection
 
+
+## Introduction and Motivation
+
+Projectile motion is crucial in fields like sports, engineering, and defense. Understanding how launch angles affect range helps optimize performance in activities like basketball and javelin throwing, and informs designs in military and aerospace applications.
+
 ## Theoretical Foundation  
 
  Projectile motion follows Newton’s laws, with **horizontal motion** at constant velocity and **vertical motion** under gravity. The **range** depends on **initial velocity** and **angle of projection**, derived from kinematic equations.
