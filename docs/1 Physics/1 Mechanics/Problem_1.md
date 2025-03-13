@@ -16,13 +16,11 @@ Projectile motion is crucial in fields like sports, engineering, and defense. Un
  * Angle of projection ($θ$)
  * Gravitational acceleration ($g$)
 
-
-
 The **range formula** is: 
 
 $$R = \frac{v_0^2 \sin(2\theta)}{g}$$
 
-
+## Range And Analysis
 It is **maximized at 45°** in ideal conditions. Real-world factors like air resistance, gravity variations, and terrain require computational simulations for accuracy. Higher velocity increases range, and lower gravity extends it, making this study crucial for sports, engineering, and aerospace applications.
 
 ## Practical Applications  
@@ -114,7 +112,10 @@ plt.show()
 ```
 ![alt text](image-2.png)
 
+## Conclusion
 
+This study demonstrates that the range of a projectile is significantly influenced by the launch angle, with **45°** yielding the maximum range under ideal conditions. By exploring projectile motion through theoretical calculations and visualizations, we gain valuable insights applicable to sports, engineering, and defense. While the model assumes ideal conditions, real-world factors such as air resistance and terrain can alter the trajectory. Future studies could expand on this by incorporating these factors for more accurate predictions.
 
-
+## Source
+[Colab Python Computation](https://colab.research.google.com/drive/1tRIRwlVz-um7t8zBhD_DcY86myED9WIK?usp=sharing)
 
