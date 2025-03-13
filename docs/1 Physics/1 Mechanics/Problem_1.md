@@ -4,7 +4,7 @@
 
 ## Introduction and Motivation
 
-Projectile motion is crucial in fields like sports, engineering, and defense. Understanding how launch angles affect range helps optimize performance in activities like basketball and javelin throwing, and informs designs in military and aerospace applications.
+Projectile motion is crucial in fields like sports, engineering, and defense. Understanding how launch angles affect range helps optimize performance in activities like basketball and javelin throwing, and informs designs in aerospace applications.
 
 ## Theoretical Foundation  
 
@@ -21,13 +21,19 @@ The **range formula** is:
 $$R = \frac{v_0^2 \sin(2\theta)}{g}$$
 
 ## Range And Analysis
-It is **maximized at 45°** in ideal conditions. Real-world factors like air resistance, gravity variations, and terrain require computational simulations for accuracy. Higher velocity increases range, and lower gravity extends it, making this study crucial for sports, engineering, and aerospace applications.
+* Range is **maximized at 45°** in ideal conditions.
+
+* Real-world factors like air resistance, gravity variations, and terrain require computational simulations for accuracy. 
+
+* Higher velocity increases range, and lower gravity extends it, making this study crucial for sports, engineering, and aerospace applications.
 
 ## Practical Applications  
 
-Projectile motion is crucial in **sports**, where athletes optimize angles for maximum range (e.g., soccer, basketball, javelin).  
-In **military and defense**, accurate trajectory calculations improve targeting for artillery and missiles.  
-In **aerospace and engineering**, projectile principles guide rocket launches, spacecraft trajectories, and planetary landings, requiring computational simulations for precision.  
+* Projectile motion is crucial in **sports**, where athletes optimize angles for maximum range (e.g., soccer, basketball, javelin).  
+
+* In **military and defense**, accurate trajectory calculations improve targeting for artillery and missiles.  
+
+* In **aerospace and engineering**, projectile principles guide rocket launches, spacecraft trajectories, and planetary landings, requiring computational simulations for precision.  
 
 
 
