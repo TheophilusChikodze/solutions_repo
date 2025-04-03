@@ -97,9 +97,7 @@ To analyze the forced damped pendulum, a computational model is required. The fo
 ### **1. Numerical Simulation**
 - Solve the differential equation:
 
-  $$
-  \ddot{\theta} + b \dot{\theta} + c \sin{\theta} = A \cos{(\omega t)}
-  $$
+  $$\ddot{\theta} + b \dot{\theta} + c \sin{\theta} = A \cos{(\omega t)}$$
 
 - Use **Runge-Kutta methods** for numerical integration.
 - Simulate motion under different damping, forcing, and initial conditions.
@@ -110,13 +108,7 @@ To analyze the forced damped pendulum, a computational model is required. The fo
 - **Poincaré Sections:** Sample phase space at regular intervals to detect periodicity.
 - **Bifurcation Diagrams:** Track changes in behavior as parameters vary.
 
-### **3. Code Implementation (Python)**
-Utilize Python libraries like:
-- `scipy.integrate.solve_ivp` for numerical solutions.
-- `matplotlib` for visualization.
-- `numpy` for computations.
-
-Example snippet:
+### Example snippet:
 
 ```python
 from scipy.integrate import solve_ivp
