@@ -68,23 +68,23 @@ These dynamics apply to systems like suspension bridges, oscillating circuits, a
 
 The forced damped pendulum model applies to various real-world systems, including:
 
-### **1. Energy Harvesting**  
+### **Energy Harvesting**  
 - Used in **vibration energy harvesters** to convert mechanical oscillations into electrical power.  
 - Example: Piezoelectric systems that harness ambient vibrations.
 
-### **2. Suspension Bridges & Structural Engineering**  
+### **Suspension Bridges & Structural Engineering**  
 - Explains **resonance-induced failures**, such as the **Tacoma Narrows Bridge collapse**.  
 - Helps design damping mechanisms to prevent destructive oscillations.
 
-### **3. Oscillating Circuits**  
+### **Oscillating Circuits**  
 - Analogous to **driven RLC circuits**, where voltage and current oscillate under an external AC source.  
 - Used in **radio tuning** and **signal processing**.
 
-### **4. Biomechanics & Robotics**  
+### **Biomechanics & Robotics**  
 - Models **human gait** and walking stability under external forces.  
 - Helps in designing **prosthetics** and **robotic locomotion**.
 
-### **5. Climate & Planetary Motion**  
+### **Climate & Planetary Motion**  
 - Describes **quasiperiodic variations** in planetary orbits.  
 - Used in models of **climate oscillations** influenced by external periodic forces.
 
@@ -94,7 +94,7 @@ These applications highlight the model’s significance across physics, engineer
 
 To analyze the forced damped pendulum, a computational model is required. The following steps outline the implementation:
 
-### **1. Numerical Simulation**
+### **Numerical Simulation**
 - Solve the differential equation:
 
   $$\ddot{\theta} + b \dot{\theta} + c \sin{\theta} = A \cos{(\omega t)}$$
@@ -102,7 +102,7 @@ To analyze the forced damped pendulum, a computational model is required. The fo
 - Use **Runge-Kutta methods** for numerical integration.
 - Simulate motion under different damping, forcing, and initial conditions.
 
-### **2. Visualization**
+### **Visualization**
 - **Time Series Plots:** Show angular displacement over time.
 - **Phase Portraits:** Plot $\dot{\theta}$ vs. $\theta$ to reveal stability and chaos.
 - **Poincaré Sections:** Sample phase space at regular intervals to detect periodicity.
