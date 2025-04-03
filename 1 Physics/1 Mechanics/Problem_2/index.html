@@ -253,9 +253,7 @@
 <ul>
 <li>Solve the differential equation:</li>
 </ul>
-<p>$$
-  \ddot{\theta} + b \dot{\theta} + c \sin{\theta} = A \cos{(\omega t)}
-  $$</p>
+<p><span class="arithmatex">\(<span class="arithmatex">\(\ddot{\theta} + b \dot{\theta} + c \sin{\theta} = A \cos{(\omega t)}\)</span>\)</span></p>
 <ul>
 <li>Use <strong>Runge-Kutta methods</strong> for numerical integration.</li>
 <li>Simulate motion under different damping, forcing, and initial conditions.</li>
@@ -267,12 +265,7 @@
 <li><strong>Poincaré Sections:</strong> Sample phase space at regular intervals to detect periodicity.</li>
 <li><strong>Bifurcation Diagrams:</strong> Track changes in behavior as parameters vary.</li>
 </ul>
-<h3 id="3-code-implementation-python"><strong>3. Code Implementation (Python)</strong></h3>
-<p>Utilize Python libraries like:
-- <code>scipy.integrate.solve_ivp</code> for numerical solutions.
-- <code>matplotlib</code> for visualization.
-- <code>numpy</code> for computations.</p>
-<p>Example snippet:</p>
+<h3 id="example-snippet">Example snippet:</h3>
 <pre><code class="language-python">from scipy.integrate import solve_ivp
 import numpy as np
 import matplotlib.pyplot as plt
