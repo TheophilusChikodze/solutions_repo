@@ -5,9 +5,26 @@
 ## Introduction and Motivation
 
 Projectile motion is crucial in fields like sports, engineering, and defense. Understanding how launch angles affect range helps optimize performance in activities like basketball and javelin throwing, and informs designs in aerospace applications.
+ 
+## Differential Equation for Range as a Function of Angle
 
-## Theoretical Foundation  
+The motion of a projectile launched at speed \($v_0$ \) and angle \( $\theta$ \) is governed by:
 
+### **Equations of Motion**
+- **Horizontal:**  
+  $$
+  \frac{d^2 x}{dt^2} = 0 \quad \Rightarrow \quad x(t) = v_0 \cos{\theta} \cdot t
+  $$  
+- **Vertical:**  
+  $$
+  \frac{d^2 y}{dt^2} = -g \quad \Rightarrow \quad y(t) = v_0 \sin{\theta} \cdot t - \frac{1}{2} g t^2
+  $$
+
+### **Range Equation**
+At ($y = 0$ )
+
+
+## Theoretical Foundation 
  Projectile motion follows Newton’s laws, with **horizontal motion** at constant velocity and **vertical motion** under gravity. The **range** depends on **initial velocity** and **angle of projection**, derived from kinematic equations.
 
  The key variables are: 
@@ -21,7 +38,7 @@ The **range formula** is:
 $$R = \frac{v_0^2 \sin(2\theta)}{g}$$
 
 ## Range And Analysis
-* Range is **maximized at 45°** in ideal conditions.
+* Range is **maximized at 45°** in ideal conditions because the optimal angle of 45° strikes a balance between maximizing the time of flight (due to vertical velocity) and maintaining a large horizontal velocity, which leads to the maximum range in ideal conditions
 
 * Real-world factors like **air resistance**, **gravity variations**, and **terrain** require computational simulations for accuracy. 
 
@@ -75,6 +92,24 @@ $$
 R = \frac{400}{10} = 40 \text{ m}
 $$
 
+#### Example 3: **Angle = 60°**  
+
+$$
+R = \frac{20^2 \sin(120°)}{10}
+$$
+
+$$
+R = \frac{400 \times \sin(120°)}{10}
+$$
+
+$$
+R = \frac{400 \times 0.866}{10}
+$$
+
+$$
+R = \frac{346.4}{10} = 34.64 \text{ m}
+$$
+
 These results show that **45° gives the maximum range**, while **35° has a slightly shorter range**.
 
 
@@ -85,38 +120,45 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Constants
-g = 10  # Acceleration due to gravity (m/s²)
-v0 = 20  # Initial velocity (m/s)
+g = 10  # gravity (m/s²)
+v0 = 20  # initial velocity (m/s)
+angles = [30, 45, 60]  # angles in degrees
+colors = ['blue', 'green', 'orange']
 
-# Angle (45 degrees)
-angle = 45
-angle_rad = np.radians(angle)  # Convert to radians
+plt.figure(figsize=(10, 6))
 
-# Time of flight calculation
-t_flight = 2 * v0 * np.sin(angle_rad) / g
+for angle, color in zip(angles, colors):
+    angle_rad = np.radians(angle)
+    
+    # Time of flight
+    t_flight = 2 * v0 * np.sin(angle_rad) / g
+    t = np.linspace(0, t_flight, num=100)
+    
+    # Trajectory
+    x = v0 * np.cos(angle_rad) * t
+    y = v0 * np.sin(angle_rad) * t - 0.5 * g * t**2
+    
+    # Max height
+    max_height = (v0**2 * np.sin(angle_rad)**2) / (2 * g)
+    
+    # Plot trajectory
+    plt.plot(x, y, label=f"{angle}° | Range = {x[-1]:.2f} m | Max Height = {max_height:.2f} m", color=color)
+    
+    # Annotate range point
+    plt.plot(x[-1], 0, 'o', color=color)
+    plt.text(x[-1], 0.5, f"{x[-1]:.2f} m", ha='center', fontsize=9, color=color)
 
-# Time intervals for the projectile motion
-t = np.linspace(0, t_flight, num=100)
-
-# Calculate x and y positions of the projectile
-x = v0 * np.cos(angle_rad) * t
-y = v0 * np.sin(angle_rad) * t - 0.5 * g * t**2
-
-# Plot the trajectory
-plt.figure(figsize=(8, 5))
-plt.plot(x, y, label=f'Projectile at {angle}°', color="b")
-plt.axhline(0, color="black",linewidth=1)  # Ground level
-plt.axvline(x=max(x), linestyle="--", color="r", label=f"Range = {max(x):.2f} m")
-
-# Labels and title
+# Labels and grid
+plt.title("Projectile Trajectories at Different Angles")
 plt.xlabel("Distance (m)")
 plt.ylabel("Height (m)")
-plt.title(f"Projectile Motion at {angle}° with Initial Velocity {v0} m/s")
-plt.legend()
 plt.grid(True)
+plt.legend()
+plt.axhline(0, color='black', linewidth=1)
+plt.tight_layout()
 plt.show()
 ```
-![alt text](image-2.png)
+![alt text](image-4.png)
 
 ## Conclusion
 
@@ -124,4 +166,3 @@ This study demonstrates that the range of a projectile is significantly influenc
 
 ## Source
 [Colab Python Computation](https://colab.research.google.com/drive/1tRIRwlVz-um7t8zBhD_DcY86myED9WIK?usp=sharing)
-
